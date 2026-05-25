@@ -20,18 +20,31 @@ public class Etudiant extends BaseEntity {
     private String ine;
 
     private LocalDate dateNaissance;
+
     private String lieuNaissance;
+
     private String sexe;
+
     private String nationalite;
+
     private String adresse;
+
     private String ville;
+
     private String pays;
+
     private String promo;
+
     private Integer anneeDebut;
+
     private Integer anneeSortie;
+
     private String diplomes;
+
     private String autresFormations;
+
     private String statut;
+
     private String photo;
 
     @ManyToOne

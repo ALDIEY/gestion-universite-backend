@@ -184,12 +184,18 @@ public class EtudiantService {
                 .autresFormations(etudiant.getAutresFormations())
                 .statut(etudiant.getStatut())
                 .photo(etudiant.getPhoto())
+
                 .formationId(etudiant.getFormation() != null ? etudiant.getFormation().getId() : null)
-                .formationLibelle(etudiant.getFormation() != null ? etudiant.getFormation().getLibelle() : null)
+                .formationCode(etudiant.getFormation() != null ? etudiant.getFormation().getCodeFormation() : null)
+                .formationIntitule(etudiant.getFormation() != null ? etudiant.getFormation().getIntitule() : null)
+                .formationNiveau(etudiant.getFormation() != null ? etudiant.getFormation().getNiveau() : null)
+
                 .userId(etudiant.getUser() != null ? etudiant.getUser().getId() : null)
                 .nom(etudiant.getUser() != null ? etudiant.getUser().getNom() : null)
                 .prenom(etudiant.getUser() != null ? etudiant.getUser().getPrenom() : null)
                 .email(etudiant.getUser() != null ? etudiant.getUser().getEmail() : null)
+                .telephone(etudiant.getUser() != null ? etudiant.getUser().getTelephone() : null)
+                .actif(etudiant.getUser() != null ? etudiant.getUser().getActif() : null)
                 .build();
     }
 }

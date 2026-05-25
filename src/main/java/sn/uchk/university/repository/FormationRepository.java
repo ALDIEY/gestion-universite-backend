@@ -9,9 +9,9 @@ import java.util.Optional;
 @Repository
 public interface FormationRepository extends JpaRepository<Formation, Long> {
 
-    boolean existsByCodeFormation(String codeFormation);
+    boolean existsByIntitule(String intitule);
 
-    boolean existsByLibelle(String libelle);
+    boolean existsByCodeFormation(String codeFormation);
 
     Optional<Formation> findByCodeFormation(String codeFormation);
 }

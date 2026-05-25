@@ -1,6 +1,5 @@
 package sn.uchk.university.entity.responseDTO;
 
-
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
@@ -14,6 +13,7 @@ public class EtudiantResponse {
 
     private Long id;
     private String ine;
+
     private LocalDate dateNaissance;
     private String lieuNaissance;
     private String sexe;
@@ -30,10 +30,14 @@ public class EtudiantResponse {
     private String photo;
 
     private Long formationId;
-    private String formationLibelle;
+    private String formationCode;
+    private String formationIntitule;
+    private String formationNiveau;
 
     private Long userId;
     private String nom;
     private String prenom;
     private String email;
+    private String telephone;
+    private Boolean actif;
 }

@@ -20,7 +20,7 @@ public class FormationService {
 
     public FormationResponse create(FormationRequest request) {
 
-        if (formationRepository.existsByLibelle(request.getLibelle())) {
+        if (formationRepository.existsByIntitule(request.getIntitule())) {
             throw new RuntimeException("Cette formation existe déjà");
         }
 
@@ -28,7 +28,7 @@ public class FormationService {
 
         Formation formation = Formation.builder()
                 .codeFormation(codeFormation)
-                .libelle(request.getLibelle())
+                .intitule(request.getIntitule())
                 .typeFormation(request.getTypeFormation())
                 .niveau(request.getNiveau())
                 .dateDebut(request.getDateDebut())
@@ -37,7 +37,6 @@ public class FormationService {
                 .typeFinancement(request.getTypeFinancement())
                 .nbHommes(request.getNbHommes() != null ? request.getNbHommes() : 0)
                 .nbFemmes(request.getNbFemmes() != null ? request.getNbFemmes() : 0)
-                .description(request.getDescription())
                 .active(request.getActive() != null ? request.getActive() : true)
                 .build();
 
@@ -70,16 +69,16 @@ public class FormationService {
         Formation formation = formationRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Formation introuvable"));
 
-        formation.setLibelle(request.getLibelle());
+        formation.setIntitule(request.getIntitule());
         formation.setTypeFormation(request.getTypeFormation());
         formation.setNiveau(request.getNiveau());
         formation.setDateDebut(request.getDateDebut());
         formation.setDateFin(request.getDateFin());
         formation.setMontantFinancement(request.getMontantFinancement());
         formation.setTypeFinancement(request.getTypeFinancement());
-        formation.setNbHommes(request.getNbHommes());
-        formation.setNbFemmes(request.getNbFemmes());
-        formation.setDescription(request.getDescription());
+        formation.setNbHommes(request.getNbHommes() != null ? request.getNbHommes() : 0);
+        formation.setNbFemmes(request.getNbFemmes() != null ? request.getNbFemmes() : 0);
+
 
         if (request.getActive() != null) {
             formation.setActive(request.getActive());
@@ -109,7 +108,7 @@ public class FormationService {
         return FormationResponse.builder()
                 .id(formation.getId())
                 .codeFormation(formation.getCodeFormation())
-                .libelle(formation.getLibelle())
+                .intitule(formation.getIntitule())
                 .typeFormation(formation.getTypeFormation())
                 .niveau(formation.getNiveau())
                 .dateDebut(formation.getDateDebut())
@@ -118,7 +117,7 @@ public class FormationService {
                 .typeFinancement(formation.getTypeFinancement())
                 .nbHommes(formation.getNbHommes())
                 .nbFemmes(formation.getNbFemmes())
-                .description(formation.getDescription())
+
                 .active(formation.getActive())
                 .createdAt(formation.getCreatedAt())
                 .updatedAt(formation.getUpdatedAt())

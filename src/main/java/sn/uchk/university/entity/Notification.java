@@ -1,4 +1,4 @@
-package sn.uchk.university.notification.entity;
+package sn.uchk.university.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -19,7 +19,9 @@ public class Notification extends BaseEntity {
     @Column(columnDefinition = "TEXT")
     private String message;
 
-    private Boolean lu = false;
+    private Boolean lu;
+
+    private String typeNotification;
 
     @ManyToOne
     @JoinColumn(name = "user_id")

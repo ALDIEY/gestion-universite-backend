@@ -19,11 +19,11 @@ public class Formation extends BaseEntity {
     private String codeFormation;
 
     @Column(nullable = false)
-    private String libelle;
-
-    private String typeFormation;
+    private String intitule;
 
     private String niveau;
+
+    private String typeFormation;
 
     private LocalDate dateDebut;
 
@@ -36,8 +36,6 @@ public class Formation extends BaseEntity {
     private Integer nbHommes;
 
     private Integer nbFemmes;
-
-    private String description;
 
     private Boolean active;
 }

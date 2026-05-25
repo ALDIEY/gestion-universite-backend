@@ -1,6 +1,5 @@
 package sn.uchk.university.entity.responseDTO;
 
-
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
@@ -17,11 +16,11 @@ public class FormationResponse {
 
     private String codeFormation;
 
-    private String libelle;
-
-    private String typeFormation;
+    private String intitule;
 
     private String niveau;
+
+    private String typeFormation;
 
     private LocalDate dateDebut;
 
@@ -34,8 +33,6 @@ public class FormationResponse {
     private Integer nbHommes;
 
     private Integer nbFemmes;
-
-    private String description;
 
     private Boolean active;
 

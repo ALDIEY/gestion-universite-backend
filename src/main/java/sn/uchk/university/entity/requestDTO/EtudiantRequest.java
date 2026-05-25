@@ -1,4 +1,5 @@
 package sn.uchk.university.entity.requestDTO;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -8,12 +9,14 @@ import java.time.LocalDate;
 @Setter
 public class EtudiantRequest {
 
+    // Infos User
     private String nom;
     private String prenom;
     private String email;
     private String password;
     private String telephone;
 
+    // Infos Etudiant
     private LocalDate dateNaissance;
     private String lieuNaissance;
     private String sexe;

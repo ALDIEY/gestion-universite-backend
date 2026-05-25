@@ -9,11 +9,11 @@ import java.time.LocalDate;
 @Setter
 public class FormationRequest {
 
-    private String libelle;
-
-    private String typeFormation;
+    private String intitule;
 
     private String niveau;
+
+    private String typeFormation;
 
     private LocalDate dateDebut;
 
@@ -21,13 +21,12 @@ public class FormationRequest {
 
     private Double montantFinancement;
 
+
     private String typeFinancement;
 
     private Integer nbHommes;
 
     private Integer nbFemmes;
-
-    private String description;
 
     private Boolean active;
 }

@@ -14,16 +14,19 @@ import sn.uchk.university.user.entity.User;
 @Builder
 public class Document extends BaseEntity {
 
+    @Column(unique = true)
     private String codeDocument;
 
     private String titre;
 
     private String typeDocument;
 
+    private String statut;
+
+    private String fichierUrl;
+
     @Column(columnDefinition = "TEXT")
     private String description;
-
-    private String fichier;
 
     @ManyToOne
     @JoinColumn(name = "created_by")

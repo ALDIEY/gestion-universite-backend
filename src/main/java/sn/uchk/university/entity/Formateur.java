@@ -21,9 +21,9 @@ public class Formateur extends BaseEntity {
 
     private String specialite;
 
-    private String gradeAcademique;
+    private String grade;
 
-    private String departement;
+    private String statut;
 
     @OneToOne
     @JoinColumn(name = "user_id")
