@@ -21,6 +21,8 @@ public class Inscription extends BaseEntity {
 
     private String statut;
 
+    private String commentaire;
+
     @ManyToOne
     @JoinColumn(name = "etudiant_id")
     private Etudiant etudiant;
