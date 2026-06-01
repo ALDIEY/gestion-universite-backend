@@ -14,6 +14,7 @@ import sn.uchk.university.user.entity.User;
 @Builder
 public class Notification extends BaseEntity {
 
+    @Column(nullable = false)
     private String titre;
 
     @Column(columnDefinition = "TEXT")

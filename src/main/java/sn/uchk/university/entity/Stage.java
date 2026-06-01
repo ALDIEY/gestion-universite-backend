@@ -15,7 +15,12 @@ import java.time.LocalDate;
 @Builder
 public class Stage extends BaseEntity {
 
-    private String entreprise;
+    @Column(unique = true)
+    private String codeStage;
+
+    private String sujet;
+
+    private String typeStage;
 
     private LocalDate dateDebut;
 
@@ -23,8 +28,9 @@ public class Stage extends BaseEntity {
 
     private String statut;
 
-    @Column(columnDefinition = "TEXT")
-    private String bilan;
+    private String appreciation;
+
+    private Double noteFinale;
 
     @ManyToOne
     @JoinColumn(name = "etudiant_id")
@@ -33,4 +39,8 @@ public class Stage extends BaseEntity {
     @ManyToOne
     @JoinColumn(name = "partenaire_id")
     private Partenaire partenaire;
+
+    @ManyToOne
+    @JoinColumn(name = "formateur_id")
+    private Formateur encadrantAcademique;
 }

@@ -13,6 +13,7 @@ import sn.uchk.university.common.entity.BaseEntity;
 @Builder
 public class Budget extends BaseEntity {
 
+    @Column(nullable = false)
     private String annee;
 
     private Double montantPrevisionnel;

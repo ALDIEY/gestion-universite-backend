@@ -16,6 +16,7 @@ import java.time.LocalTime;
 @Builder
 public class Reunion extends BaseEntity {
 
+    @Column(nullable = false)
     private String titre;
 
     private String typeReunion;

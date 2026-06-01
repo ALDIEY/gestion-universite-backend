@@ -14,9 +14,10 @@ import sn.uchk.university.user.entity.User;
 @Builder
 public class Document extends BaseEntity {
 
-    @Column(unique = true)
+    @Column(unique = true, nullable = false)
     private String codeDocument;
 
+    @Column(nullable = false)
     private String titre;
 
     private String typeDocument;

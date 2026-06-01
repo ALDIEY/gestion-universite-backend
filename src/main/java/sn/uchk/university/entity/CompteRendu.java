@@ -13,9 +13,10 @@ import sn.uchk.university.common.entity.BaseEntity;
 @Builder
 public class CompteRendu extends BaseEntity {
 
+    @Column(nullable = false)
     private String titre;
 
-    @Column(columnDefinition = "TEXT")
+    @Column(columnDefinition = "LONGTEXT")
     private String contenu;
 
     private String fichierUrl;

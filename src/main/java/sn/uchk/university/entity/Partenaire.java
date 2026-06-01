@@ -13,6 +13,7 @@ import sn.uchk.university.common.entity.BaseEntity;
 @Builder
 public class Partenaire extends BaseEntity {
 
+    @Column(nullable = false)
     private String nom;
 
     private String domaine;
@@ -20,6 +21,8 @@ public class Partenaire extends BaseEntity {
     private String contact;
 
     private String email;
+
+    private String telephone;
 
     private String adresse;
 
