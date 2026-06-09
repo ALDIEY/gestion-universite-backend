@@ -1,0 +1,200 @@
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+:root {
+  --uchk-primary: #123a7a;
+  --uchk-primary-soft: #e8eef8;
+  --uchk-accent: #14b8a6;
+  --uchk-warn: #c2410c;
+  --uchk-bg: #f3f6fb;
+  --uchk-surface: #ffffff;
+  --uchk-border: #e2e8f0;
+  --uchk-text: #1e293b;
+  --uchk-muted: #64748b;
+  --uchk-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+  --uchk-radius: 10px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--uchk-bg);
+  color: var(--uchk-text);
+  line-height: 1.45;
+}
+
+a { color: var(--uchk-primary); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+h1, h2, h3, h4, h5 { letter-spacing: 0; }
+
+/* Snackbar */
+.snack-error .mdc-snackbar__surface {
+  background: #c62828 !important;
+  color: white !important;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #edf2f7; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+/* Tables */
+.mat-mdc-table {
+  width: 100%;
+  background: var(--uchk-surface) !important;
+  border: 1px solid var(--uchk-border);
+  border-radius: var(--uchk-radius);
+  overflow: hidden;
+}
+
+.mat-mdc-header-row {
+  background: #f8fafc !important;
+}
+
+.mat-mdc-header-cell {
+  color: #334155 !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+}
+
+.mat-mdc-cell, .mat-mdc-header-cell {
+  padding: 14px 16px !important;
+}
+
+.mat-mdc-row:hover .mat-mdc-cell { background: #f8fafc; }
+
+/* Cards */
+mat-card {
+  border: 1px solid var(--uchk-border) !important;
+  border-radius: var(--uchk-radius) !important;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.04) !important;
+}
+
+mat-card:hover {
+  box-shadow: var(--uchk-shadow) !important;
+}
+
+.mat-mdc-card-header {
+  padding: 18px 18px 8px !important;
+}
+
+.mat-mdc-card-content {
+  padding: 18px !important;
+}
+
+.mat-mdc-card-actions {
+  padding: 0 18px 18px !important;
+}
+
+/* Common page rhythm */
+.page-header,
+.page-head {
+  background: var(--uchk-surface);
+  border: 1px solid var(--uchk-border);
+  border-radius: var(--uchk-radius);
+  padding: 18px 20px;
+  margin-bottom: 22px !important;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.04);
+}
+
+.page-header h2,
+.page-head h2 {
+  color: var(--uchk-primary) !important;
+  margin: 0;
+  font-size: 24px !important;
+  font-weight: 750;
+}
+
+.page-header p,
+.page-head p {
+  color: var(--uchk-muted) !important;
+  margin: 5px 0 0;
+}
+
+.mat-mdc-form-field {
+  --mdc-outlined-text-field-outline-color: #cbd5e1;
+  --mdc-outlined-text-field-hover-outline-color: var(--uchk-primary);
+  --mdc-outlined-text-field-focus-outline-color: var(--uchk-primary);
+}
+
+.mat-mdc-raised-button.mat-primary {
+  --mdc-protected-button-container-color: var(--uchk-primary);
+}
+
+.mat-mdc-chip.mat-primary {
+  --mdc-chip-elevated-container-color: var(--uchk-primary-soft);
+  --mdc-chip-label-text-color: var(--uchk-primary);
+}
+
+.empty-state,
+.empty-tab,
+.empty-row {
+  background: #fbfdff;
+  border: 1px dashed #cbd5e1;
+  border-radius: var(--uchk-radius);
+}
+
+.tab-content {
+  gap: 18px !important;
+}
+
+.quick-form,
+.form,
+.form-grid,
+.inline-form,
+.cours-form,
+.inscription-form {
+  gap: 14px !important;
+}
+
+.tab-toolbar,
+.search-bar,
+.export-actions {
+  gap: 10px !important;
+}
+
+.full-table {
+  border-radius: var(--uchk-radius);
+  overflow: hidden;
+}
+
+.mat-mdc-tab-body-content {
+  padding-top: 2px;
+}
+
+.mat-mdc-tab-labels {
+  background: #fbfdff;
+  border-bottom: 1px solid var(--uchk-border);
+}
+
+.mat-mdc-tab .mdc-tab__text-label {
+  color: #475569;
+  font-weight: 650;
+}
+
+.mat-mdc-tab.mdc-tab--active .mdc-tab__text-label {
+  color: var(--uchk-primary);
+}
+
+.mat-mdc-paginator {
+  background: transparent !important;
+  margin-top: 12px;
+}
+
+@media (max-width: 760px) {
+  .page-header,
+  .page-head {
+    padding: 14px;
+    flex-direction: column;
+    align-items: stretch !important;
+  }
+
+  .mat-mdc-cell, .mat-mdc-header-cell {
+    padding: 12px !important;
+  }
+}

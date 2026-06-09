@@ -1,0 +1,21 @@
+# Runtime logs
+*.log
+
+# Frontend artefacts
+uchk-frontend/node_modules/
+uchk-frontend/dist/
+uchk-frontend/.angular/
+
+# Backend handled separately
+gestion-universite-backend/
+
+# Backend artefacts
+gestion-universite-backend/target/
+gestion-universite-backend/backend.log
+gestion-universite-backend/backend.err.log
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
