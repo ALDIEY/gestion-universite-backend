@@ -10,7 +10,7 @@ public class ModuleFormationRequest {
     private String libelle;
 
     private Integer coefficient;
-
+    private Integer credit;
     private Integer volumeHoraire;
 
     private String semestre;

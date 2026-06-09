@@ -22,7 +22,7 @@ public class ModuleFormation extends BaseEntity {
     private Integer coefficient;
 
     private Integer volumeHoraire;
-
+    private Integer credit;
     private String semestre;
 
     private String description;

@@ -34,6 +34,7 @@ public class ModuleFormationService {
         ModuleFormation module = ModuleFormation.builder()
                 .codeModule(codeModule)
                 .libelle(request.getLibelle())
+                .credit(request.getCredit() != null ? request.getCredit() : 1)
                 .coefficient(request.getCoefficient() != null ? request.getCoefficient() : 1)
                 .volumeHoraire(request.getVolumeHoraire() != null ? request.getVolumeHoraire() : 0)
                 .semestre(request.getSemestre())
@@ -82,6 +83,7 @@ public class ModuleFormationService {
                 .orElseThrow(() -> new RuntimeException("Formation introuvable"));
 
         module.setLibelle(request.getLibelle());
+        module.setCredit(request.getCredit() != null ? request.getCredit() : 1);
         module.setCoefficient(request.getCoefficient() != null ? request.getCoefficient() : 1);
         module.setVolumeHoraire(request.getVolumeHoraire() != null ? request.getVolumeHoraire() : 0);
         module.setSemestre(request.getSemestre());
@@ -119,6 +121,7 @@ public class ModuleFormationService {
                 .id(module.getId())
                 .codeModule(module.getCodeModule())
                 .libelle(module.getLibelle())
+                .credit(module.getCredit())
                 .coefficient(module.getCoefficient())
                 .volumeHoraire(module.getVolumeHoraire())
                 .semestre(module.getSemestre())

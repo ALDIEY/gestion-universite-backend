@@ -18,6 +18,7 @@ public class ModuleFormationResponse {
     private Integer coefficient;
 
     private Integer volumeHoraire;
+    private Integer credit;
 
     private String semestre;
 
